@@ -1,0 +1,32 @@
+{
+    "name": "ecdc_trigger",
+    "properties": {
+        "annotations": [],
+        "runtimeState": "Started",
+        "pipelines": [
+            {
+                "pipelineReference": {
+                    "referenceName": "pl_ingest_ecdc_csv",
+                    "type": "PipelineReference"
+                }
+            }
+        ],
+        "type": "ScheduleTrigger",
+        "typeProperties": {
+            "recurrence": {
+                "frequency": "Day",
+                "interval": 1,
+                "startTime": "2023-01-06T00:36:00",
+                "timeZone": "India Standard Time",
+                "schedule": {
+                    "minutes": [
+                        27
+                    ],
+                    "hours": [
+                        23
+                    ]
+                }
+            }
+        }
+    }
+}

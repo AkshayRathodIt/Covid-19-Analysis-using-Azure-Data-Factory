@@ -1,0 +1,37 @@
+{
+    "name": "pl_processed_cases_and_death",
+    "properties": {
+        "activities": [
+            {
+                "name": "cases and deaths data",
+                "type": "ExecuteDataFlow",
+                "dependsOn": [],
+                "policy": {
+                    "timeout": "0.12:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "dataflow": {
+                        "referenceName": "df_transform_cases_death",
+                        "type": "DataFlowReference"
+                    },
+                    "compute": {
+                        "coreCount": 8,
+                        "computeType": "General"
+                    },
+                    "traceLevel": "Fine"
+                }
+            }
+        ],
+        "folder": {
+            "name": "process"
+        },
+        "annotations": [],
+        "lastPublishTime": "2023-01-17T09:55:58Z"
+    },
+    "type": "Microsoft.DataFactory/factories/pipelines"
+}
